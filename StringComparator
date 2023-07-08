@@ -1,0 +1,29 @@
+package com.bean.inter;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+public class Reversal {
+
+	public static void main(String [] args) {
+		String s1="name";
+		String reversed="anusha";
+		List<String> names=new ArrayList<String>();
+		names.add(s1);
+		names.add(reversed);
+		Comparator<String> com=new Comparator<String>() {
+
+			public int compare(String o1, String o2) {
+				if(o1.equals(o2))
+					return -1;
+				else
+					return 1;
+			}};
+			
+		
+		Collections.sort(names,com);
+		System.out.println(names);
+	}
+}
